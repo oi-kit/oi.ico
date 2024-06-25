@@ -1,5 +1,6 @@
-import { cn } from '@/helpers/utils';
 import type { FC, PropsWithChildren } from 'react';
+import { cn } from '@/helpers/utils';
+import Footer from '@/components/footer';
 
 interface DefatulLayoutProps extends PropsWithChildren {
   className?: string;
@@ -21,6 +22,7 @@ const DefatulLayout: FC<DefatulLayoutProps> = ({
       )}>
         {children}
       </main>
+      <Footer isHideFooter={isHideFooter} />
     </>
   );
 };
