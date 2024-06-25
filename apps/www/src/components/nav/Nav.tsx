@@ -2,12 +2,14 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import { HOPE_PATH } from '@/config/path';
 import { nav } from '@/components/nav/NavData';
-import NavItem from './NavItem';
+import NavItem from '@/components/nav/NavItem';
+import ThemeToggle from '@/components/ThemeToggle';
 
 interface NavProps { isHideNav?: boolean; }
 
 const Nav: FC<NavProps> = ({ isHideNav }) => {
   if (isHideNav) return null;
+
   return (
     <header className='w-full bg-card z-50 shadow-md'>
       <nav className='max-w-7xl mx-auto flex justify-between items-center h-20 px-4'>
@@ -26,6 +28,7 @@ const Nav: FC<NavProps> = ({ isHideNav }) => {
             ))}
           </div>
         </div>
+        <ThemeToggle />
       </nav>
     </header>
   );
