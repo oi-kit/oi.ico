@@ -38,21 +38,10 @@ body {
     bg-background
 }
 
-h1 {
+.h1 {
   @apply
     text-3xl
     md:text-5xl
     text-foreground
     font-medium
-}
-
-input {
-  @apply 
-    appearance-none
-    border-0
-    outline-none
-    ring-0
-    focus:ring-0
-    bg-transparent
-    text-foreground
 }
