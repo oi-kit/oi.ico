@@ -1,11 +1,13 @@
+import { DOCS_PATH, HOPE_PATH } from "@/config/path";
+
 export const nav = [
   {
-    href: '/',
+    href: HOPE_PATH,
     content: 'Home',
     target: '',
   },
   {
-    href: '/docs',
+    href: DOCS_PATH,
     content: 'Documentation',
     target: '',
   },
