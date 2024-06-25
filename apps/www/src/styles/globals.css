@@ -29,33 +29,30 @@
 
     --border: 0 0% 31%;
   }
+}
 
-  body {
-    @apply
-      text-sm
-      text-foreground
-      bg-background
-      font-inter
-  }
+body {
+  @apply
+    text-sm
+    text-foreground
+    bg-background
+}
 
-  h1 {
-    @apply
-      text-3xl
-      leading-10
-      md:text-5xl
-      md:leading-[48.41px]
-      text-foreground
-      font-medium
-  }
+h1 {
+  @apply
+    text-3xl
+    md:text-5xl
+    text-foreground
+    font-medium
+}
 
-  input {
-    @apply 
-      appearance-none
-      border-0
-      outline-none
-      ring-0
-      focus:ring-0
-      bg-transparent
-      text-foreground
-  }
+input {
+  @apply 
+    appearance-none
+    border-0
+    outline-none
+    ring-0
+    focus:ring-0
+    bg-transparent
+    text-foreground
 }

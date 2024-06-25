@@ -1,16 +1,24 @@
 import type { FC, PropsWithChildren } from 'react';
-import { cn } from '../../helpers/cn';
+import { cn } from '@/helpers/utils';
 
-interface SectionContainerProps extends PropsWithChildren { className?: string }
+interface SectionContainerProps extends PropsWithChildren {
+  asChild?: boolean;
+  className?: string;
+};
 
-const SectionContainer: FC<SectionContainerProps> = ({ className, children }) => {
+const SectionContainer: FC<SectionContainerProps> = ({
+  children,
+  asChild = false,
+  className,
+}) => {
+  const Section = asChild ? 'section' : 'div';
   return (
-    <div className={cn(
+    <Section className={cn(
       'container py-14 lg:py-20 px-4',
       className
     )}>
       {children}
-    </div>
+    </Section>
   );
 }
 
