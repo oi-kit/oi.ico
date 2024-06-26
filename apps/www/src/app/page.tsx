@@ -15,7 +15,7 @@ const HomePage: FC = () => {
               Icons Library For Designers And Developers, Free For Any Use.
             </h1>
           </div>
-          <div className='flex gap-6 pt-[70px]'>
+          <div className='flex flex-col md:flex-row gap-6 pt-[70px]'>
             <Search />
             <Filter />
           </div>

@@ -11,8 +11,6 @@ const buttonVariants = cva(
       variant: {
         default:
           'bg-card sm:border-b sm:border-card sm:hover:border-foreground sm:rounded-sm hover:border-muted hover:transparent hover:transition',
-        outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         secondary:
           'bg-card border-b border-foreground rounded-sm',
         link:

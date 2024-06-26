@@ -11,7 +11,7 @@ const Search: FC<SearchProps> = ({ }) => {
       <Command>
         <CommandInput
           placeholder="Search..."
-          className="placeholder:text-muted"
+          className="placeholder:text-muted h-10 rounded-md"
         />
       </Command>
     </div>
