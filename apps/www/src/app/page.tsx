@@ -7,8 +7,8 @@ import Filter from '@/components/filter';
 const HomePage: FC = () => {
   return (
     <DefatulLayout>
-      <div className='bg-card rounded-b-[50px] w-full h-full'>
-        <SectionContainer asChild>
+      <section className='bg-card rounded-b-[50px] w-full h-full'>
+        <SectionContainer>
           <div className='flex flex-col'>
             <h1 className='max-w-3xl h1'>
               <span className='text-cyan-400'>Open-source </span>
@@ -20,7 +20,7 @@ const HomePage: FC = () => {
             <Filter />
           </div>
         </SectionContainer>
-      </div>
+      </section>
     </DefatulLayout>
   );
 }
