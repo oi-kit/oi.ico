@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import SectionContainer from '@/components/containers/SectionContainer';
 import DefatulLayout from '@/components/layouts/DefatulLayout';
+import Search from '@/components/search';
 
 const HomePage: FC = () => {
   return (
@@ -14,7 +15,7 @@ const HomePage: FC = () => {
             </h1>
           </div>
           <div className='flex gap-6 pt-[70px]'>
-            Search and Filter
+            <Search />
           </div>
         </SectionContainer>
       </div>
