@@ -45,3 +45,18 @@ body {
     text-foreground
     font-medium
 }
+
+.h2 {
+  @apply 
+    text-xl
+    leading-3
+    text-foreground
+    font-medium
+}
+
+.h3 {
+  @apply
+    text-lg
+    text-foreground
+    font-medium
+}
