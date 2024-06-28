@@ -12,12 +12,12 @@ const Filter: FC = () => {
       >
         <Button
           variant='secondary'
-          className='bg-background z-[100]'
+          className='bg-background z-50'
         >
           All
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-[150px] -mt-3 border-none bg-background rounded-none rounded-b-sm'>
+      <PopoverContent className='w-[150px] -mt-3 border-none bg-background rounded-none rounded-b-sm !z-40'>
         <div className='grid gap-2 pt-2'>
           {filter.map((item, index) => (
             <span key={index}>
