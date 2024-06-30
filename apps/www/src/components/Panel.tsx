@@ -5,7 +5,7 @@ import { cn } from '@/helpers/utils';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { MoonIcon } from '@radix-ui/react-icons';
-import MarkdownPreview from './MarkdownPreview';
+import MarkdownPreview from '@/components/markdown/MarkdownPreview';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 
 interface PanelProps extends PropsWithChildren { className?: string }
