@@ -26,7 +26,7 @@ const MarkdownCopy: FC<MarkdownCopyProps> = ({ id }) => {
     >
       <div
         className={cn(
-          'cursor-pointer transition-all w-5 h-5 bg-foreground',
+          'cursor-pointer transition-all w-5 h-5',
           onSuccess ? 'bg-green-400' : 'bg-foreground',
         )}
         onTransitionEnd={() => {
@@ -36,13 +36,13 @@ const MarkdownCopy: FC<MarkdownCopyProps> = ({ id }) => {
           }, 500);
         }}
       >
-        Checkmar
+        M
       </div>
       <div className='h-full w-full absolute top-0 left-0 flex items-center justify-center'>
         <div
           className={cn(
-            'transition-all w-5 h-5 bg-foreground',
-            onCopy ? 'bg-green-400' : 'bg-foreground',
+            'transition-all w-5 h-5',
+            onCopy ? 'bg-green-400' : 'bg-card',
           )}
           onTransitionEnd={() => {
             if (onCopy) {
@@ -50,7 +50,7 @@ const MarkdownCopy: FC<MarkdownCopyProps> = ({ id }) => {
             }
           }}
         >
-          Copy
+          C
         </div>
       </div>
     </button>

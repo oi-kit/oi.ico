@@ -30,8 +30,8 @@ const Panel: FC<PanelProps> = ({
             <h3 className='h3'>icon-name</h3>
             <div className='flex gap-[80px] justify-between'>
               <div className='flex flex-col gap-4 mt-4'>
-                <MarkdownPreview content='<i class=”dfvdfnvkdf”></i>' />
-                <MarkdownPreview content='Panel' />
+                <MarkdownPreview content='<i class="Content"></i>' />
+                <MarkdownPreview content='!!!!!!' />
               </div>
               <div className='flex flex-col gap-4 mt-4 max-w-[200px] w-full'>
                 <Popover>
