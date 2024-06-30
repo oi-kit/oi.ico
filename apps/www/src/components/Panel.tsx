@@ -51,14 +51,13 @@ const Panel: FC<PanelProps> = ({
                   </PopoverTrigger>
                   <PopoverContent className='w-[200px] bg-background border-none rounded-sm py-2'>
                     <div className='grid gap-2 pt-2'>
-                      <span>Default</span>
                       <span>16px</span>
                       <span>24px</span>
                       <span>36px</span>
                     </div>
                   </PopoverContent>
                 </Popover>
-                <div className='flex justify-between gap-2'>
+                <div className='flex justify-between gap-2 translate-x-[.5px]'>
                   <Button
                     variant='secondary'
                     className='w-full border-none bg-foreground text-card text-sm'
