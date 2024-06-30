@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { MoonIcon } from '@radix-ui/react-icons';
 import MarkdownPreview from '@/components/markdown/MarkdownPreview';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
+import SVG from '@/components/SVG';
 
 interface PanelProps extends PropsWithChildren { className?: string }
 
@@ -18,13 +19,15 @@ const Panel: FC<PanelProps> = ({
     <Dialog>
       <DialogTrigger asChild className={cn('rounded-sm', className)}>
         <Button variant='icon' size='icon'>
-          <MoonIcon className='size-6' />
+          {/* <MoonIcon className='size-6' /> */}
+          <SVG variant='search' className='size-6' />
         </Button>
       </DialogTrigger>
       <DialogContent className='w-full border-border bg-card max-w-[735px]'>
         <div className='w-full flex gap-6'>
           <div className='flex items-center justify-center w-24 h-24 bg-card rounded-sm border border-border'>
-            <MoonIcon className='size-9' />
+            {/* <MoonIcon className='size-9' /> */}
+            <SVG variant='search' />
           </div>
           <div className='flex flex-col gap-4'>
             <h3 className='h3'>icon-name</h3>

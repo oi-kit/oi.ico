@@ -2,10 +2,9 @@ import type { FC } from 'react';
 import SectionContainer from '@/components/containers/SectionContainer';
 import SideBar from '@/components/sidebar';
 import Panel from '@/components/Panel';
+import SVG from '@/components/SVG';
 
-interface ProductProps { }
-
-const Product: FC<ProductProps> = ({ }) => {
+const Product: FC = () => {
   return (
     <SectionContainer asChild className='flex gap-[60px]'>
       <SideBar />
