@@ -10,10 +10,18 @@ const MarkdownCopy: FC<MarkdownCopyProps> = ({ id }) => {
   const [onSuccess, setSuccess] = useState<boolean>(false);
 
   const handleCopy = async () => {
-    let text = document.getElementById(id)!.textContent;
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const text = Array.from(element.childNodes)
+      .map(node => node.textContent)
+      .join('\n')
+      .replace(/^\n+|\n+$/g, '');
+
     try {
       await navigator.clipboard.writeText(text!);
       setOnCopy(true);
+      setSuccess(true);
     } catch (err) {
       console.error("Failed to copy: ", err);
     }
