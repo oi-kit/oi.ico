@@ -1,6 +1,4 @@
-import type { FC } from 'react';
-
-export const iconPaths = {
+export const icons = {
   search:
     'M17.1667 14.6667H16.1133L15.74 14.3067C17.0467 12.7867 17.8333 10.8133 17.8333 8.66667C17.8333 3.88 13.9533 0 9.16667 0C4.38 0 0.5 3.88 0.5 8.66667C0.5 13.4533 4.38 17.3333 9.16667 17.3333C11.3133 17.3333 13.2867 16.5467 14.8067 15.24L15.1667 15.6133V16.6667L21.8333 23.32L23.82 21.3333L17.1667 14.6667ZM9.16667 14.6667C5.84667 14.6667 3.16667 11.9867 3.16667 8.66667C3.16667 5.34667 5.84667 2.66667 9.16667 2.66667C12.4867 2.66667 15.1667 5.34667 15.1667 8.66667C15.1667 11.9867 12.4867 14.6667 9.16667 14.6667Z',
   sun:
@@ -22,45 +20,3 @@ export const iconPaths = {
   download:
     'M11.25 4.75H8.25V0.25H3.75V4.75H0.75L6 10L11.25 4.75ZM0.75 11.5V13H11.25V11.5H0.75Z',
 };
-
-export const iconSizes = {
-  default: 24,
-  small: 16,
-  large: 32,
-};
-
-interface SVGProps {
-  className?: string;
-  variant?: keyof typeof iconPaths;
-  size?: keyof typeof iconSizes;
-};
-
-const SVG: FC<SVGProps> = ({
-  className,
-  variant = 'search',
-  size = 'default',
-  ...props
-}) => {
-  const iconPath = iconPaths[variant];
-  const iconSize = iconSizes[size];
-  return (
-    <svg
-      width={iconSize}
-      height={iconSize}
-      fill='none'
-      viewBox='0 0 24 24'
-      xmlns='http://www.w3.org/2000/svg'
-      className={className}
-      {...props}
-    >
-      <path
-        fillRule='evenodd'
-        clipRule='evenodd'
-        fill='currentColor'
-        d={iconPath}
-      />
-    </svg>
-  );
-}
-
-export default SVG;
