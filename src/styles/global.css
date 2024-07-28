@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 13%;
+
+    --muted: 0 0% 56%;
+    --muted-foreground: 0 0% 39%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 91%;
+
+    --border: 0 0% 83%;
+    --radius: 1.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 17%;
+    --foreground: 0 0% 100%;
+
+    --muted: 0 0% 56%;
+    --muted-foreground: 0 0% 22%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 5%;
+
+    --border: 0 0% 31%;
+  }
+}
+
+body {
+  @apply
+    text-sm
+    bg-background
+    text-foreground
+}
+
+.h1 {
+  @apply
+    text-3xl
+    md:text-5xl
+    text-foreground
+    font-medium
+}
+
+.h2 {
+  @apply 
+    text-xl
+    leading-3
+    text-foreground
+    font-medium
+}
+
+.h3 {
+  @apply
+    text-lg
+    text-foreground
+    font-medium
+}
