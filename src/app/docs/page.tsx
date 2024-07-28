@@ -1,10 +1,14 @@
 import type { FC } from 'react';
 
+import { Container, Section } from '@/components/layouts';
+
 const DocsPage: FC = () => {
   return (
-    <div>
-      DocsPage
-    </div>
+    <Section>
+      <Container>
+        DocsPage
+      </Container>
+    </Section>
   );
 }
 

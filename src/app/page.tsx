@@ -1,11 +1,15 @@
 import type { FC } from 'react';
 
-import { Layout } from '@/components/layouts';
+import { Layout, Container, Section } from '@/components/layouts';
 
 const HomePage: FC = () => {
   return (
     <Layout>
-      HomePage
+      <Section>
+        <Container>
+          HomePage
+        </Container>
+      </Section>
     </Layout>
   );
 }
