@@ -10,7 +10,7 @@ import {
 
 import { isSlottable } from '@/utils/isSlottable';
 
-import { SlotClone } from '@/components/primitives/slot';
+import { SlotClone } from '@/utils/slot';
 
 interface SlotProps extends PropsWithChildren, HTMLAttributes<HTMLElement> { }
 
