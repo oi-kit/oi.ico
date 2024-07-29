@@ -8,9 +8,9 @@ import {
   type PropsWithChildren,
 } from 'react';
 
-import { SlotClone } from '@/components/primitives/slot';
-
 import { isSlottable } from '@/utils/isSlottable';
+
+import { SlotClone } from '@/components/primitives/slot';
 
 interface SlotProps extends PropsWithChildren, HTMLAttributes<HTMLElement> { }
 
