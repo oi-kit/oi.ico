@@ -6,9 +6,11 @@ import {
   type PropsWithChildren,
 } from 'react';
 
-import { getElementRef } from '@/utils/getElementRef';
 import { mergeProps } from '@/utils/mergeProps';
+
 import { composeRefs } from '@/utils/compose-refs';
+
+import { getElementRef } from '@/utils/getElementRef';
 
 interface SlotCloneProps extends PropsWithChildren { }
 
