@@ -1,1 +1,3 @@
-export type PossibleRef<T> = React.Ref<T> | undefined;
+import { Ref } from 'react';
+
+export type PossibleRef<T> = Ref<T> | undefined;
