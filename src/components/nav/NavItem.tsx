@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import { Button } from '@/components/primitives/button';
 
-import { cn } from '@/helpers/cn';
+import { cn } from '@/utils/cn';
 
 interface NavItemProps extends PropsWithChildren {
   href: string | '#';

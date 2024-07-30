@@ -6,7 +6,7 @@ import { siteConfig } from '@/config/site';
 
 import { NextProvides as Providers } from '@/providers';
 
-import { cn } from '@/helpers/cn';
+import { cn } from '@/utils/cn';
 
 import '@/styles/global.css';
 

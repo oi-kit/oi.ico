@@ -5,7 +5,7 @@ import {
 
 import { Slot } from '@/utils/slot';
 
-import { cn } from '@/helpers/cn';
+import { cn } from '@/utils/cn';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;

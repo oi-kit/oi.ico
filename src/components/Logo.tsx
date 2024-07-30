@@ -14,7 +14,7 @@ import {
 
 import { Image } from '@nextui-org/image';
 
-import { cn } from '@/helpers/cn';
+import { cn } from '@/utils/cn';
 
 interface LogoProps {
   className?: string;

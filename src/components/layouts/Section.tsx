@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren } from 'react';
 
-import { cn } from '@/helpers/cn';
+import { cn } from '@/utils/cn';
 
 interface SectionProps extends PropsWithChildren {
   className?: string;

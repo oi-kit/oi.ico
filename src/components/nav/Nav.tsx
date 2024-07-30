@@ -4,7 +4,7 @@ import type { HideNavFooterState } from '@/config/state/LayoutState';
 import { NavThemeToggle, NavItemsList } from '@/components/nav';
 import Logo from '@/components/Logo';
 
-import { cn } from '@/helpers/cn';
+import { cn } from '@/utils/cn';
 
 interface NavProps extends HideNavFooterState { }
 
