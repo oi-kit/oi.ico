@@ -1,5 +1,14 @@
 import type { AnyProps } from '@/types/AnyProps';
 
+/**
+ * Merges properties from two sets of props, giving precedence to the `childProps`
+ * when properties overlap. Special handling is provided for event handler functions,
+ * `style`, and `className` properties.
+ *
+ * @param {AnyProps} slotProps - The initial set of props, which may be overridden by `childProps`.
+ * @param {AnyProps} childProps - The props to merge into `slotProps`. These have higher precedence.
+ * @returns {AnyProps} - A new object containing the merged props, with `childProps` taking precedence.
+ */
 const mergeProps = (slotProps: AnyProps, childProps: AnyProps) => {
   const overrideProps = { ...childProps };
 

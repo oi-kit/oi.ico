@@ -14,6 +14,14 @@ import { getElementRef } from '@/utils/getElementRef';
 
 interface SlotCloneProps extends PropsWithChildren { }
 
+/**
+ * `SlotClone` is a component that clones its children, merging props and combining refs.
+ * It applies `slotProps` to its children and handles ref composition.
+ *
+ * @param {SlotCloneProps} props - Properties for the `SlotClone` component, including children.
+ * @param {React.Ref<any>} forwardedRef - Ref to be forwarded to the cloned child element.
+ * @returns {JSX.Element | null} - Cloned child element with merged props and refs or null.
+ */
 const SlotClone = forwardRef<any, SlotCloneProps>((props, forwardedRef) => {
   const { children, ...slotProps } = props;
 

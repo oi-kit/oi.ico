@@ -14,6 +14,15 @@ import { isSlottable } from '@/utils/isSlottable';
 
 interface SlotProps extends PropsWithChildren, HTMLAttributes<HTMLElement> { }
 
+/**
+ * `Slot` is a component that identifies slotted content within its children. 
+ * It renders the content of the first `Slottable` child, replacing any 
+ * existing slotted content.
+ *
+ * @param {SlotProps} props - Properties for the `Slot` component, including children.
+ * @param {React.Ref<HTMLElement>} forwardedRef - Ref to be forwarded to the `SlotClone` component.
+ * @returns {JSX.Element} - A `SlotClone` component wrapping the processed children.
+ */
 const Slot = forwardRef<HTMLElement, SlotProps>((props, forwardedRef) => {
   const { children, ...slotProps } = props;
   const childrenArray = Children.toArray(children);

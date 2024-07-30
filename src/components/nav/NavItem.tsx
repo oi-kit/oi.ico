@@ -6,6 +6,8 @@ import type {
 
 import Link from 'next/link';
 
+import { Button } from '@/components/primitives/button';
+
 import { cn } from '@/helpers/cn';
 
 interface NavItemProps extends PropsWithChildren {
@@ -24,15 +26,17 @@ const NavItem: FC<NavItemProps> = ({
   ...rest
 }) => {
   return (
-    <Link
-      href={href}
-      target={target}
-      className={cn(
-        'text-[16px]',
-        className
-      )} {...rest}>
-      {content ?? children}
-    </Link>
+    <Button asChild>
+      <Link
+        href={href}
+        target={target}
+        className={cn(
+          'text-[16px]',
+          className
+        )} {...rest}>
+        {content ?? children}
+      </Link>
+    </Button>
   );
 }
 
