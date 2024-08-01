@@ -16,6 +16,8 @@ import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
 import { useMetaThemeColor } from '@/hooks/useMetaThemeColor';
 import { useClickInsideOutside } from '@/hooks/useClickInsideOutside';
 
+import AnimateItems from '@/components/AnimateItems';
+
 import { HOPE_PATH } from '@/config/paths';
 
 import { cn } from '@/utils/cn';
@@ -24,6 +26,9 @@ interface ModalProps extends PropsWithChildren {
   onClosePath?: string;
   onClose?: () => void;
   anchor?: 'top' | 'center';
+  className?: string;
+  fast?: boolean;
+  blur?: boolean;
 }
 
 const Modal: FC<ModalProps> = ({
@@ -31,6 +36,9 @@ const Modal: FC<ModalProps> = ({
   onClosePath,
   onClose,
   anchor = 'center',
+  className,
+  fast,
+  blur,
 }) => {
   const router = useRouter();
 
@@ -69,7 +77,8 @@ const Modal: FC<ModalProps> = ({
         anchor === 'top'
           ? 'items-start pt-4 sm:pt-24'
           : 'items-center',
-        'bg-card',
+        blur && 'backdrop-blur-sm',
+        'bg-black',
       )}
       initial={!prefersReducedMotion
         ? { backgroundColor: 'rgba(0, 0, 0, 0)' }
@@ -81,7 +90,22 @@ const Modal: FC<ModalProps> = ({
         duration: 0.3,
         easing: 'easeOut'
       }}>
-      {children}
+      <AnimateItems
+        duration={fast ? 0.1 : 0.3}
+        items={[<div
+          ref={contentRef}
+          key='content'
+          className={cn(
+            'w-[calc(100vw-1.5rem)] sm:w-[min(768px,90vw)]',
+            'p-8 rounded-lg',
+            'md:rounded-xl',
+            'bg-card',
+            'border border-border',
+            className,
+          )}>
+          {children}
+        </div>]}
+      />
     </motion.div>
   );
 }
