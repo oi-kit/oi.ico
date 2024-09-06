@@ -1,6 +1,6 @@
 import { MutableRefObject } from 'react';
 
-import type { PossibleRef } from '@/types/PossibleRef';
+import type { PossibleRef } from '@/types';
 
 /**
  * Sets the value of a ref, either by calling a ref callback or by assigning to a ref object.

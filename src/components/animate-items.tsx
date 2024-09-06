@@ -6,7 +6,7 @@ import {
   type ReactNode
 } from 'react';
 
-import type { AnimationConfig } from '@/types/AnimationConfig';
+import type { AnimationConfig } from '@/types';
 
 import { Variant, motion } from 'framer-motion';
 

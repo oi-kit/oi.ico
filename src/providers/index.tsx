@@ -1,4 +1,5 @@
-export { default as NextUIProvider } from './NextUiProvider';
-export { default as NextThemeProvider } from './NextThemeProvider';
+import NextThemeProvider from './next-theme-provider';
 
-export { default as NextProvides } from './Provides';
+export {
+  NextThemeProvider
+};

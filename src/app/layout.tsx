@@ -1,10 +1,10 @@
 import type { FC, PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
+import { NextThemeProvider } from '@/providers';
+
 import { inter } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
-
-import { NextProvides as Providers } from '@/providers';
 
 import { cn } from '@/utils/cn';
 
@@ -24,9 +24,9 @@ const layout: FC<layoutProps> = ({ children }) => {
         'min-h-screen min-w-[320px] antialiased',
         inter.className,
       )}>
-        <Providers>
+        <NextThemeProvider>
           {children}
-        </Providers>
+        </NextThemeProvider>
       </body>
     </html>
   );

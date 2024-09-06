@@ -1,6 +1,6 @@
 import { setRef } from '@/utils/compose-refs';
 
-import type { PossibleRef } from '@/types/PossibleRef';
+import type { PossibleRef } from '@/types';
 
 /**
  * Composes multiple ref callbacks into a single callback function. When the returned 

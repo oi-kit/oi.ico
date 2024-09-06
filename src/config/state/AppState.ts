@@ -1,4 +1,4 @@
-import type { AnimationConfig } from '@/types/AnimationConfig';
+import type { AnimationConfig } from '@/types';
 
 import { createContext, useContext } from 'react';
 

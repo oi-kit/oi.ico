@@ -12,7 +12,7 @@ import {
   HOPE_PATH,
 } from '@/config/paths';
 
-import { Image } from '@nextui-org/image';
+import Image from 'next/image';
 
 import { cn } from '@/utils/cn';
 

@@ -2,12 +2,11 @@
 
 import type { FC } from 'react';
 
+import type { ThemeProviderProps as NextThemeProviderProps } from 'next-themes/dist/types';
+
 import { ThemeProvider } from 'next-themes';
-import { ThemeProviderProps as NextThemeProviderProps } from 'next-themes/dist/types';
 
-interface ThemeProviderProps extends NextThemeProviderProps { }
-
-const NextThemeProvider: FC<ThemeProviderProps> = ({ children, ...rest }) => {
+const NextThemeProvider: FC<NextThemeProviderProps> = ({ children, ...rest }) => {
   return (
     <ThemeProvider
       attribute='class'
