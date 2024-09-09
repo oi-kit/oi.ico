@@ -1,10 +1,12 @@
 import type { FC } from 'react';
 
+import { Layout } from '@/components/layouts';
+
 const HomePage: FC = () => {
   return (
-    <div>
-      HomePage
-    </div>
+    <Layout>
+
+    </Layout>
   );
 }
 
