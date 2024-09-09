@@ -6,14 +6,17 @@ interface ContainerProps extends ComponentProps<'div'> {
   padding?: 'tight' | 'normal' | 'loose';
   centered?: boolean;
   spaceChildren?: boolean;
+  sectionClassName?: string;
+  containerClassName?: string;
 }
 
 const Container: FC<ContainerProps> = ({
   children,
-  className,
   padding = 'normal',
   centered = false,
   spaceChildren = true,
+  sectionClassName,
+  containerClassName,
 }) => {
   const getPaddingClasses = () => {
     switch (padding) {
@@ -25,13 +28,15 @@ const Container: FC<ContainerProps> = ({
 
   return (
     <section className={cn(
-      'rounded-md container',
+      'relative',
       getPaddingClasses(),
+      sectionClassName
     )}>
       <div className={cn(
+        'container rounded-md',
         centered && 'flex flex-col items-center',
         spaceChildren && 'space-y-4',
-        className
+        containerClassName
       )}>
         {children}
       </div>
