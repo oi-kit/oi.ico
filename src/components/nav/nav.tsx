@@ -5,6 +5,7 @@ import { Navbar, NavbarBody, NavbarItem } from '@/components/primitives/navbar';
 import Logo from '@/components/logo';
 
 import { cn } from '@/utils/cn';
+import ThemeToggle from '../theme-toggle';
 
 interface NavProps extends ComponentProps<'header'> {
   isHideNav?: boolean;
@@ -27,7 +28,7 @@ const Nav: FC<NavProps> = ({ isHideNav, className, ...rest }) => {
               GitHub
             </NavbarItem>
             <NavbarItem>
-              ThemeChange
+              <ThemeToggle />
             </NavbarItem>
           </div>
         </NavbarBody>
