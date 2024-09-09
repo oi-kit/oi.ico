@@ -17,7 +17,7 @@ interface NavProps extends ComponentProps<'header'> {
 const Nav: FC<NavProps> = ({ isHideNav, className, ...rest }) => {
   return (
     <header className={cn(
-      'container w-full',
+      'bg-card  w-full',
       isHideNav && 'hidden',
       className
     )} {...rest}>

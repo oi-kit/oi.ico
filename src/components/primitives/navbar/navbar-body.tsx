@@ -6,7 +6,7 @@ const NavbarBody: FC<ComponentProps<'nav'>> = ({ children, className, ...rest })
   return (
     <nav className={cn(
       'flex items-center justify-between flex-shrink-0',
-      'w-full h-16 bg-transparent',
+      'w-full h-16 container',
     )} {...rest}>
       {children}
     </nav>
