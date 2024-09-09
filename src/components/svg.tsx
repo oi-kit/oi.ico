@@ -5,8 +5,8 @@ import { cn } from '@/utils/cn';
 const SVG: FC<ComponentProps<'svg'>> = ({
   d,
   fill = 'currentColor',
-  width,
-  height,
+  width = 24,
+  height = 24,
   className,
   fillRule = 'evenodd',
   clipRule = 'evenodd',

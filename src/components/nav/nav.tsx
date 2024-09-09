@@ -4,8 +4,11 @@ import { Navbar, NavbarBody, NavbarItem } from '@/components/primitives/navbar';
 
 import Logo from '@/components/logo';
 
+import RepoLink from '@/components/repo-link';
+
+import ThemeToggle from '@/components/theme-toggle';
+
 import { cn } from '@/utils/cn';
-import ThemeToggle from '../theme-toggle';
 
 interface NavProps extends ComponentProps<'header'> {
   isHideNav?: boolean;
@@ -23,9 +26,9 @@ const Nav: FC<NavProps> = ({ isHideNav, className, ...rest }) => {
           <NavbarItem>
             <Logo />
           </NavbarItem>
-          <div className='flex gap-4'>
-            <NavbarItem className='gap-12'>
-              GitHub
+          <div className='flex items-center gap-4'>
+            <NavbarItem>
+              <RepoLink />
             </NavbarItem>
             <NavbarItem>
               <ThemeToggle />
