@@ -1,4 +1,4 @@
-import { Ref } from 'react';
+import { Dispatch, Ref, RefObject, SetStateAction } from 'react';
 
 export type AnimationType = 'none'
   | 'scale'
@@ -18,3 +18,10 @@ export type AnyProps = Record<string, any>;
 
 
 export type PossibleRef<T> = Ref<T> | undefined;
+
+export type DialogContextType = {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  uniqueId: string;
+  triggerRef: RefObject<HTMLDivElement>;
+}
