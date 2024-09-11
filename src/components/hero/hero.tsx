@@ -2,13 +2,14 @@ import type { ComponentProps, FC } from 'react';
 
 import { Container } from '@/components/layouts';
 
-import { HeroStatistics, HeroHeading } from '@/components/hero';
+import { HeroStatistics, HeroHeading, HeroFilter } from '@/components/hero';
 
 const Hero: FC<ComponentProps<'div'>> = ({ className, ...rest }) => {
   return (
     <Container sectionClassName='bg-card' padding='loose' {...rest}>
       <HeroStatistics />
       <HeroHeading />
+      <HeroFilter />
     </Container>
   );
 };
