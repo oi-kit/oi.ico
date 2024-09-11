@@ -31,21 +31,22 @@ const GridSide: FC<GridSideProps> = ({
       'gap-y-4',
       className,
     )}>
-      <div className={cn(
-        'col-span-1 lg:col-span-4',
-        sideFirstOnMobile && 'order-2 lg:order-none',
-        contentMainClassName
-      )}>
-        {contentMain}
-      </div>
       {contentSide &&
         <div className={cn(
-          'col-span-1 lg:col-span-8',
-          sideFirstOnMobile && 'order-1 lg:order-none',
-          sideHiddenOnMobile && 'hidden lg:block',
+          'col-span-1 lg:col-span-2',
+          sideFirstOnMobile && 'order-2 lg:order-none',
           contentSideClassName
         )}>
           {contentSide}
+        </div>}
+      {contentMain &&
+        <div className={cn(
+          'col-span-1 lg:col-span-10',
+          sideFirstOnMobile && 'order-1 lg:order-none',
+          sideHiddenOnMobile && 'hidden lg:block',
+          contentMainClassName
+        )}>
+          {contentMain}
         </div>}
     </div>
   );
