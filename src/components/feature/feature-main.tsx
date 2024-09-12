@@ -13,7 +13,8 @@ import { useEffect, useState } from 'react';
 import SVG from '@/components/svg';
 
 import { fetchIcons } from '@/config/actions/icons';
-import { useFeature } from './feature-context';
+
+import { useFeature } from '@/components/feature/feature-context';
 
 const FeatureMain: FC<ComponentProps<'div'>> = ({ className, ...rest }) => {
   const [iconFolders, setIconFolders] = useState<IconFolder[]>([]);

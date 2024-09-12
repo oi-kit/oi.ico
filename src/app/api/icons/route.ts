@@ -6,51 +6,44 @@ import path from 'path';
 
 import { NextResponse } from 'next/server';
 
-import { JSDOM } from 'jsdom';
+import { getSvgPathData } from '@/utils/getSvgPathData';
 
 export async function GET() {
   const iconsDir = path.join(process.cwd(), 'public/icons');
 
-  async function getSvgPathData(filePath: string): Promise<string> {
-    const svgContent = await fs.readFile(filePath, 'utf-8');
-    const dom = new JSDOM(svgContent);
-    const pathElement = dom.window.document.querySelector('path');
-    return pathElement?.getAttribute('d') || '';
-  }
-
-  async function getFolders(dir: string): Promise<IconFolder[]> {
+  async function getFiles(dir: string): Promise<IconFolder> {
     const dirents = await fs.readdir(dir, { withFileTypes: true });
-    const folders: IconFolder[] = [];
+    const files: IconFile[] = [];
 
     for (const dirent of dirents) {
       const res = path.resolve(dir, dirent.name);
 
       if (dirent.isDirectory()) {
-        const files: IconFile[] = [];
-        const subdir = await fs.readdir(res);
-
-        for (const file of subdir) {
-          if (file.endsWith('.svg')) {
-            const filePath = path.join(res, file);
-            const d = await getSvgPathData(filePath);
-            files.push({
-              name: file.replace('.svg', ''),
-              d,
-            });
-          }
-        }
-
-        folders.push({
-          folder: dirent.name,
-          files,
+        const subfolder = await getFiles(res);
+        files.push(...subfolder.files);
+      } else if (path.extname(res) === '.svg') {
+        const dAttribute = await getSvgPathData(res);
+        files.push({
+          name: path.basename(res, '.svg'),
+          d: dAttribute,
         });
       }
     }
 
-    return folders;
+    return {
+      folder: path.basename(dir),
+      files,
+    };
   }
 
-  const icons = await getFolders(iconsDir);
+  const dirents = await fs.readdir(iconsDir, { withFileTypes: true });
+  const icons = await Promise.all(
+    dirents
+      .filter((dirent) =>
+        dirent.isDirectory())
+      .map((dirent) =>
+        getFiles(path.join(iconsDir, dirent.name)))
+  );
 
   return NextResponse.json(icons);
 }
