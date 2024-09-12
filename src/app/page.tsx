@@ -4,13 +4,15 @@ import { Layout } from '@/components/layouts';
 
 import { Hero } from '@/components/hero';
 
-import { Feature } from '@/components/feature';
+import { Feature, FeatureProvider } from '@/components/feature';
 
 const HomePage: FC = () => {
   return (
     <Layout>
-      <Hero />
-      <Feature />
+      <FeatureProvider>
+        <Hero />
+        <Feature />
+      </FeatureProvider>
     </Layout>
   );
 }

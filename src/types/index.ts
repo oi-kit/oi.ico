@@ -25,3 +25,18 @@ export type DialogContextType = {
   uniqueId: string;
   triggerRef: RefObject<HTMLDivElement>;
 }
+
+export type IconFile = {
+  name: string;
+  d: string;
+}
+
+export type IconFolder = {
+  folder: string;
+  files: IconFile[];
+}
+
+export type FeatureContextType = {
+  searchQuery: string;
+  setSearchQuery: Dispatch<SetStateAction<string>>;
+}

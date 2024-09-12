@@ -1,4 +1,6 @@
-import type { ComponentProps, FC } from 'react';
+'use client';
+
+import { ChangeEvent, type ComponentProps, type FC } from 'react';
 
 import { Input } from '@/components/primitives/input';
 
@@ -8,7 +10,16 @@ import { cn } from '@/utils/cn';
 
 import { SEARCH } from '@/config/icons';
 
+import { useFeature } from '@/components/feature/feature-context';
+
 const HeroFilter: FC<ComponentProps<'div'>> = ({ className, ...rest }) => {
+  const { searchQuery, setSearchQuery } = useFeature();
+
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+  }
+
   return (
     <div className={cn(
       'pt-14 text-muted',
@@ -22,6 +33,8 @@ const HeroFilter: FC<ComponentProps<'div'>> = ({ className, ...rest }) => {
         <Input
           className='pl-10 rounded-md placeholder:text-muted'
           placeholder='Search icons...'
+          value={searchQuery}
+          onChange={handleSearchChange}
         />
       </div>
     </div>
